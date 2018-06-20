@@ -1,2 +1,43 @@
 ﻿body {
+    background-color: #8a8b8c;
+    border: 25px solid #ff0f33;
+    padding: 5em;
+    color: black;
+}
+
+h1 {
+    font-family: 'Holtwood One SC', serif;
+    font-size: 5em;
+    outline: 10px dashed white;
+    border-radius: 50px;
+    text-align: center;
+    text-shadow: 2px 2px pink;
+}
+
+th, td, tr, label, button {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+td:hover {
+    background: #c7c9cc;
+}
+
+tr:hover {
+    background: lightyellow;
+}
+
+#header {
+    text-emphasis-style:dot;
+}
+
+form {
+    text-align: center;
+}
+
+label, input, button {
+    font-size: 20px;
+}
+
+button {
+    background: #ff0f33;
 }

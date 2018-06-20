@@ -24,10 +24,10 @@ dotnet run
 
 ## Screenshots
 
-![]()
+![Landing Page](/assets/mainView.png)
 
 
-![]()
+![Results Page](/assets/resultsView.png)
 
 ## Acknowledgements
 - [jaatay](https://github.com/jaatay), [IndigoShock](https://github.com/IndigoShock)

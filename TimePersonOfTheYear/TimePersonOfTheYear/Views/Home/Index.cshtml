@@ -1,12 +1,13 @@
 ﻿@model List<TimePersonOfTheYear.Models.Person>
-<!--add StyleSheet here-->
+<link rel="stylesheet" href="~/StyleSheet.css" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Holtwood+One+SC" rel="stylesheet">
 <h1>Time Person of the Year</h1>
 <form method="post">
 
-    <label for="beginYear"> Begin Year </label>
+    <label for="beginYear"> From Year </label>
     <input maxLength="4" name="beginYear" />
 
-    <label for="endYear"> Year </label>
+    <label for="endYear"> to Year </label>
     <input maxLength="4" name="endYear" />
 
     <button type="submit">Submit</button>

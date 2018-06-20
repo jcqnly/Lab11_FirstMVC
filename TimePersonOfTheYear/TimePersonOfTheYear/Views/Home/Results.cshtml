@@ -1,15 +1,31 @@
 ﻿@model List<TimePersonOfTheYear.Models.Person>
 
-@foreach (var person in Model)
-{ //accessing the data from the model; M needs to be capitalized
-  //can only send the View 1 thing
-    <p>@person.Year</p>
-    <p>@person.Honor</p>
-    <p>@person.Name</p>
-    <p>@person.Country</p>
-    <p>@person.BirthYear</p>
-    <p>@person.DeathYear</p>
-    <p>@person.Title</p>
-    <p>@person.Category</p>
-    <p>@person.Context</p>
-}
+<link rel="stylesheet" href="~/StyleSheet.css" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Shrikhand" rel="stylesheet">
+
+<table>
+    <tr>
+        <td>Year</td>
+        <td>Name</td>
+        <td>Country</td>
+        <td>Birth Year</td>
+        <td>Death Year</td>
+        <td>Title</td>
+        <td>Category</td>
+        <td>Context</td>
+    </tr>
+    @foreach (var person in Model)
+    { //accessing the data from the model; M needs to be capitalized
+      //can only send the View 1 thing
+      <tr>
+        <td>@person.Year</td>
+        <td>@person.Name</td>
+        <td>@person.Country</td>
+        <td>@person.BirthYear</td>
+        <td>@person.DeathYear</td>
+        <td>@person.Title</td>
+        <td>@person.Category</td>
+        <td>@person.Context</td>
+      </tr>
+    }
+</table>
