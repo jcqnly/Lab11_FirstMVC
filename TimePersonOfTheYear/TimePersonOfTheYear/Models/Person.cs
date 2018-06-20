@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -18,21 +19,8 @@ namespace TimePersonOfTheYear.Models
         public string Category { get; set; }
         public string Context { get; set; }
 
-        public Person(int year, string honor, string name, string country, 
-            int birthYear, int deathYear, string title, string category, string context)
-        {
-            Year = year;
-            Honor = honor;
-            Name = name;
-            Country = country;
-            BirthYear = birthYear;
-            DeathYear = deathYear;
-            Title = title;
-            Category = category;
-            Context = context;
-        }
-
-        public List<Person> GetPersons(int begYear, int endYear)
+        //make method that returns a type LIST of PERSON
+        public static List<Person> GetPersons(int beginYear, int endYear)
         {
             List<Person> people = new List<Person>();
             string path = Environment.CurrentDirectory;
@@ -55,6 +43,9 @@ namespace TimePersonOfTheYear.Models
                     Context = fields[8],
                 });
             }
+
+            List<Person> listofPeople = people.Where(p => (p.Year >= beginYear) && (p.Year <= endYear)).ToList();
+            return listofPeople;
         }
     }
 }

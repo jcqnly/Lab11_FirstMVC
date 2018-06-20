@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TimePersonOfTheYear.Models;
+using TimePersonOfTheYear;
 
 
 namespace TimePersonOfTheYear.Controllers
@@ -11,22 +12,25 @@ namespace TimePersonOfTheYear.Controllers
     public class HomeController : Controller
     {
         //default action for the controller
+        [HttpGet]
         public IActionResult Index()
         {
-            //instantiate each person
+            return View();
+        }
 
-
-            //Collections initializer
-            List<Person> timePerson = 
-                new List<Person> { };
-
-            return View(timePerson);
+        [HttpPost]
+        public IActionResult Index(int beginYear, int endYear)
+        {
+            return RedirectToAction("Results", new { newBeginYear = beginYear, newEndYear = endYear });
         }
 
         //redirect user to another page
-        public IActionResult Class()
+        public IActionResult Results(int newBeginYear, int newEndYear)
         {
-            return RedirectToAction();
+            ViewData["Message"] = "Person Of The Year";
+            Person person = new Person();
+
+            return View(Person.GetPersons(newBeginYear, newEndYear));
         }
     }
 }
