@@ -12,19 +12,3 @@
     <button type="submit">Submit</button>
 
 </form>
-
-    
-@foreach (var person in Model)
-{ //accessing the data from the model; M needs to be capitalized
-  //can only send the View 1 thing
-    <p>@person.Year</p>
-    <p>@person.Honor</p>
-    <p>@person.Name</p>
-    <p>@person.Country</p>
-    <p>@person.BirthYear</p>
-    <p>@person.DeathYear</p>
-    <p>@person.Title</p>
-    <p>@person.Category</p>
-    <p>@person.Context</p>
-}
-
